@@ -9,15 +9,9 @@
 $ git clone https://github.com/<your_username>/JSEpisode4.git
 ```
 
-#### Tools
-- Install `node`:
-  ```bash
-  $ brew install node
-  ```
-
 #### Running The Tests
 
-Install all the requirements:
+Install all the requirements [make sure that you have node and npm active on your device](https://warehouse.joincoded.com/workshops/0-system-setup/nodejs/mac-users):
 
 1. Navigate to the project root (you'll find a file called `package.json` there).
 2. Install the requirments using `npm install`.
