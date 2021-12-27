@@ -1,9 +1,7 @@
-# JavaScript Episode 4
-
 ## Instructions
 
 #### Tools
-
+- Fork and clone [this repository](https://github.com/JoinCODED/TASK-objects-iterators-books-authors)
 - Install `node`:
   ```bash
   $ brew install node
