@@ -11,11 +11,11 @@
 2. each function will level you up, reach the heightest level as much as you can, **YOU DONT HAVE TO FINISH ALL OF THEM**
 3. levels :
     * getBookById => **level 100 🤓**
-    * getAuthorByName => **level 100 🤓**
+    * getAuthorByName => **level 150 🤓**
     * bookCountsByAuthor => **level 200 😎**
     * booksByColor => **level 300 😏**
     * titlesByAuthorName => **level 400 🤩**
-    * mostProlificAuthor => **level 400 🤩**
+    * mostProlificAuthor => **level 450 🤩**
     * relatedBooks => **level 500 🤯**
     * friendliestAuthor => **level 10000000000 🚀🚀🚀**
 
