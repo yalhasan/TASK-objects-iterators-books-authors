@@ -126,8 +126,3 @@ module.exports = {
   relatedBooks,
   friendliestAuthor,
 };
-
-/**
- * Uncomment the following lines if you
- * want to manually test your code
- */
