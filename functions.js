@@ -9,9 +9,15 @@ const books = require("./books.json");
  * - returns undefined if no matching book is found
  ****************************************************************/
 function getBookById(bookId, books) {
-  // Your code goes here
+  return books.find((book) => {
+    if (book.id == bookId) {
+      return true;
+    } else {
+      return undefined;
+    }
+  });
 }
-// console.log(getBookById(12, books));
+//console.log(getBookById(12, books));
 
 /**************************************************************
  * getAuthorByName(authorName, authors):
@@ -21,9 +27,15 @@ function getBookById(bookId, books) {
  * - returns undefined if no matching author is found
  ****************************************************************/
 function getAuthorByName(authorName, authors) {
-  // Your code goes here
+  return authors.find((author) => {
+    if (author.name.toLowerCase() == authorName.toLowerCase()) {
+      return true;
+    } else {
+      return undefined;
+    }
+  });
 }
-// console.log(getAuthorByName("J.K. Rowling", authors));
+//console.log(getAuthorByName("J.K. Rowling", authors));
 
 /**************************************************************
  * bookCountsByAuthor(authors):
@@ -32,9 +44,17 @@ function getAuthorByName(authorName, authors) {
  *    [{ author: <NAME>, bookCount: <NUMBER_OF_BOOKS> }]
  ****************************************************************/
 function bookCountsByAuthor(authors) {
-  // Your code goes here
+  let a = [];
+  let obj = { author: "", bookCount: "" };
+
+  authors.forEach((author) => {
+    obj.author = author.name;
+    obj.bookCount = author.books;
+    a.push({ ...obj });
+  });
+  return a;
 }
-// console.log(bookCountsByAuthor(authors));
+//console.log(bookCountsByAuthor(authors));
 
 /**************************************************************
  * booksByColor(books):
@@ -45,8 +65,6 @@ function bookCountsByAuthor(authors) {
  ****************************************************************/
 function booksByColor(books) {
   const colors = {};
-
-  // Your code goes here
 
   return colors;
 }
