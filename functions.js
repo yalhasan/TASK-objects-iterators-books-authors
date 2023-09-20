@@ -63,9 +63,15 @@ function bookCountsByAuthor(authors) {
  *   and the values are arrays of book titles:
  *    { <COLOR>: [<BOOK_TITLES>] }
  ****************************************************************/
+//------------------------------------GET BACK TO THIS!!!!!!!!!!!!!
 function booksByColor(books) {
   const colors = {};
-
+  books.forEach((book) => {
+    colors.key = book.color;
+  });
+  colors.filter((color) => {
+    color == "white";
+  });
   return colors;
 }
 // console.log(booksByColor(books));
@@ -79,9 +85,15 @@ function booksByColor(books) {
  *    ["The Hitchhikers Guide", "The Meaning of Liff"]
  ****************************************************************/
 function titlesByAuthorName(authorName, authors, books) {
-  // Your code goes here
+  let newArray = [];
+  let a = authors.find((author) => author.name == authorName);
+  let b = books
+    .filter((book) => book.authors.some((x) => x.id == a.id))
+    .map((bb) => bb.title);
+  newArray = b;
+  return newArray;
 }
-// console.log(titlesByAuthorName("George R.R. Martin", authors, books));
+//console.log(titlesByAuthorName("George R.R. Martin", authors, books));
 
 /**************************************************************
  * mostProlificAuthor(authors):
@@ -91,9 +103,19 @@ function titlesByAuthorName(authorName, authors, books) {
  * Note: assume there will never be a tie
  ****************************************************************/
 function mostProlificAuthor(authors) {
-  // Your code goes here
+  let num = 0;
+  let max = 0;
+  let name = "";
+  authors.forEach((author) => {
+    num = author.books.length;
+    if (num > max) {
+      max = num;
+      name = author.name;
+    }
+  });
+  return name;
 }
-// console.log(mostProlificAuthor(authors));
+//console.log(mostProlificAuthor(authors));
 
 /**************************************************************
  * relatedBooks(bookId, authors, books):
